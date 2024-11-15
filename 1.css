@@ -1,0 +1,290 @@
+/* RESET DE ESTILOS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ESTILOS GENERALES */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    opacity: 0; /* Inicialmente el cuerpo es invisible */
+    animation: fadeIn 2s ease-out forwards; /* Animación de desvanecimiento */
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #c4a407c9;
+    color: #0b0b0b2c;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: 'Cooper Black', sans-serif;
+    text-align: center;
+    margin-left: 1px;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 1);
+}
+
+/* Sección Hero con la imagen de fondo */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('image copy 43.png'); /* Asegúrate de poner el nombre correcto de la imagen */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Superposición con menor opacidad para hacer el fondo más visible */
+.overlay {
+    background: rgba(255, 255, 255, 0.2); /* Menor opacidad para que el fondo se vea mejor */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido de la sección Hero */
+.hero-content {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-70%, -50%); /* Centrado perfecto */
+    text-align: center;
+    color: white;
+    transition: transform 0.5s ease;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: 'Impact', sans-serif;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    margin-bottom: 2.5rem;
+}
+
+/* Botón para mostrar el video */
+.btn-shop {
+    background-color: #00FF00;
+    color: #333;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-shop:hover {
+    background-color: #065806;
+}
+
+/* Barra lateral - Alineada a la derecha */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #f2ff006d;
+    color: rgb(96, 99, 101);
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 0;
+}
+
+.category-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.category-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-list li:hover {
+    background-color: #0f0d0c;
+    color: #a7a92393;  /* Color verde al pasar el ratón */
+    font-weight: bold; /* Engrosar el texto al pasar el ratón */
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #96a80e90;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Capa de superposición oscura para el video */
+.video-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#videoOverlay:target {
+    display: flex; /* Aparece cuando se hace clic en el enlace */
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.video-content {
+    margin: auto;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.close-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.close-link:hover {
+    text-decoration: underline;
+}
+/* Estilo para los enlaces en el menú */
+.category-list a {
+    color: rgb(28, 26, 26);
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 1.2rem;
+    font-weight: normal;
+    transition: all 0.3s ease;
+}
+
+/* Estilo para los enlaces cuando el ratón pasa por encima */
+.category-list a:hover {
+    color: #32CD32; /* Color verde al pasar el ratón */
+    font-weight: bold; /* Engrosar el texto */
+    text-decoration: none; /* Asegura que no aparezca la línea azul */
+}
+Recuadro que contiene el título, descripción y botón para el video */
+.content-box {
+    padding: 20px;
+    border: 3px solid #32CD32; /* Borde verde */
+    border-radius: 10px;       /* Bordes redondeados */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
+    color: white;              /* Color del texto */
+    text-align: center;        /* Centra el texto */
+    width: 80%;                /* Ancho del recuadro */
+    margin: 0 auto;            /* Centrado horizontal */
+    box-shadow: 0 0 15px rgba(50, 205, 50, 0.5); /* Sombra verde para resaltar */
+}
+
+/* Título dentro del recuadro */
+.content-box h1 {
+    font-size: 3.5rem;
+    font-family: 'Impact', sans-serif;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 0, 0, 1); /* Sombra de texto */
+}
+
+/* Descripción dentro del recuadro */
+.content-box .description {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Botón para mostrar el video dentro del recuadro */
+.content-box .btn-shop {
+    background-color: #00FF00;
+    color: #333;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.content-box .btn-shop:hover {
+    background-color: #065806;}

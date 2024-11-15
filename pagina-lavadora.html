@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Lavadoras</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ff6347, #ff4500, #ff8c00);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(255, 99, 71, 0.8), 0 0 20px rgba(255, 69, 0, 0.6);
+        }
+
+        /* Products Section */
+        .products {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+            background: url('image copy 39.png') no-repeat center center/cover;
+            color: white;
+        }
+
+        .products h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #FF6347;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s, margin-top 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            margin-top: -10px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .product-info p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 1em;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .old-price {
+            font-size: 1.1em;
+            color: #999;
+            text-decoration: line-through;
+            margin-right: 10px;
+        }
+
+        .discount-price {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .buy-now {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .buy-now:hover {
+            background-color: #218838;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        footer .social-links a {
+            color: #fff;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer .social-links a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>LAS MEJORES LAVADORAS</h1>
+    </header>
+
+    <!-- Products -->
+    <section class="products">
+        <h2>Lavadoras Destacadas</h2>
+        <div class="product-list">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <img src="image copy 9.png" alt="Lavadora Automática">
+                <div class="product-info">
+                    <h3>Lavadora Automática</h3>
+                    <p>Lavadora automática de alta capacidad.</p>
+                    <div class="price">
+                        <span class="old-price">Bs. 2,500</span>
+                        <span class="discount-price">Bs. 2,000</span>
+                    </div>
+                    <div class="description">Con múltiples programas de lavado y ahorro de energía.</div>
+                    <a href="#" class="buy-now">Comprar</a>
+                </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <img src="image copy 10.png" alt="Lavadora de Carga Frontal">
+                <div class="product-info">
+                    <h3>Lavadora de Carga Frontal</h3>
+                    <p>Diseño moderno y eficiente para hogares pequeños.</p>
+                    <div class="price">
+                        <span class="old-price">Bs. 3,000</span>
+                        <span class="discount-price">Bs. 2,400</span>
+                    </div>
+                    <div class="description">Perfecta para espacios reducidos y gran eficiencia.</div>
+                    <a href="#" class="buy-now">Comprar</a>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <img src="image copy 11.png" alt="Lavadora Top Load">
+                <div class="product-info">
+                    <h3>Lavadora Top Load</h3>
+                    <p>Lavadora con carga superior y diseño compacto.</p>
+                    <div class="price">
+                        <span class="old-price">Bs. 2,200</span>
+                        <span class="discount-price">Bs. 1,760</span>
+                    </div>
+                    <div class="description">Lavado rápido y eficiente para tu hogar.</div>
+                    <a href="#" class="buy-now">Comprar</a>
+                </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <img src="image copy 12.png" alt="Lavadora Inteligente">
+                <div class="product-info">
+                    <h3>Lavadora Inteligente</h3>
+                    <p>Controla tu lavadora desde tu smartphone.</p>
+                    <div class="price">
+                        <span class="old-price">Bs. 3,500</span>
+                        <span class="discount-price">Bs. 2,800</span>
+                    </div>
+                    <div class="description">Tecnología avanzada para un lavado más efectivo.</div>
+                    <a href="#" class="buy-now">Comprar</a>
+                </div>
+            </div>
+            <!-- Product Card 5 -->
+            <div class="product-card">
+                <img src="image copy 13.png" alt="Lavadora de Gran Capacidad">
+                <div class="product-info">
+                    <h3>Lavadora de Gran Capacidad</h3>
+                    <p>Perfecta para familias grandes.</p>
+                    <div class="price">
+                        <span class="old-price">Bs. 3,200</span>
+                        <span class="discount-price">Bs. 2,560</span>
+                    </div>
+                    <div class="description">Gran capacidad y eficiencia en el lavado.</div>
+                    <a href="#" class="buy-now">Comprar</a>
+                </div>
+            </div>
+            <!-- Product Card 6 -->
+            <div class="product-card">
+                <img src="image copy 14.png" alt="Lavadora Ecoeficiente">
+                <div class="product-info">
+                    <h3>Lavadora Ecoeficiente</h3>
+                    <p>Diseño amigable con el medio ambiente.</p>
+                    <div class="price">
+                        <span class="old-price">Bs. 2,800</span>
+                        <span class="discount-price">Bs. 2,240</span>
+                    </div>
+                    <div class="description">Ahorra agua y electricidad con esta lavadora ecoeficiente.</div>
+                    <a href="#" class="buy-now">Comprar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Tienda de Lavadoras. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+    <header id="INICIO">
+        <a href="index.html" class="no-style">Volver al Inicio</a>
+    </header>
+    
+    <style>
+        /* Estilo personalizado para enlaces */
+        .no-style {
+            color: inherit; /* Hereda el color del texto del contenedor */
+            text-decoration: none; /* Elimina el subrayado */
+            padding: 10px 20px;
+            border: 2px solid transparent; /* Sin bordes visibles */
+            border-radius: 5px; /* Bordes redondeados */
+            transition: background-color 0.3s, color 0.3s; /* Animación suave */
+        }
+    
+        .no-style:hover {
+            background-color: #00c1ff; /* Fondo al pasar el cursor */
+            color: #fff; /* Texto blanco al pasar el cursor */
+            text-decoration: none; /* Sin subrayado */
+        }
+    </style>
+</body>
+</html>

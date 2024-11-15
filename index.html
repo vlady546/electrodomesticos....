@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a mi página web</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>BIENVENIDO AL MEJOR LUGAR PARA ADQUIRIR TUS <br>COMPRAS</br></h1>
+            </div>
+            <button class="sidebar-toggle">&#9776;</button>
+        </nav>
+    </header>
+
+   <section class="hero">
+        <div class="overlay">
+            <div class="hero-content">
+                <!-- Recuadro que incluye todo -->
+                <div class="content-box">
+                    <h1><span>ELECTRODOMÉSTICOS</span></h1>
+                    <p class="description">
+                        <b>Los electrodomésticos, al facilitar las tareas cotidianas, permiten que los miembros de la familia disfruten más tiempo juntos. La capacidad de cocinar rápidamente, limpiar sin esfuerzo y mantener el hogar a una temperatura agradable contribuye a una atmósfera más relajada y saludable.</b>
+                    </p>
+
+                    <!-- Enlace para mostrar el video -->
+                    <a href="#videoOverlay" class="btn-shop">HAGA CLIC AQUÍ PARA VER UN VIDEO</a>
+                </div>
+
+                <!-- Contenedor del video (overlay) -->
+                <div id="videoOverlay" class="video-overlay">
+                    <!-- Botón "X" para cerrar -->
+                    <a href="#" class="close-btn">&times;</a>
+
+                    <!-- Contenido del video -->
+                    <div class="video-content">
+                        <video width="560" controls>
+                            <source src="Video de WhatsApp 2024-11-15 a las 06.05.55_a74364a9.mp4" type="video/mp4">
+                            Tu navegador no soporta el formato de video.
+                        </video>
+                        <br>
+                        <!-- Enlace "Salir" -->
+                        <a href="#" class="close-link">Salir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barra lateral de categorías -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <span class="category-title">MENÚ</span>
+            <button class="sidebar-toggle">*</button>
+        </div>
+        <ul class="category-list">
+            <li><i class="icon">&#9733;</i> <a href="pagina-refrigeradora.html">REFRIGERADORAS</a></li>
+            <li><i class="icon">&#9738;</i> <a href="pagina-lavadora.html">LAVADORAS</a></li>
+            <li><i class="icon">&#128712;</i> <a href="pagina-hornos.html">HORNOS</a></li>
+            <li><i class="icon">&#128703;</i> <a href="pagina-cocinas.html">COCINAS</a></li>
+            <li><i class="icon">&#128296;</i> <a href="pagina-microondas.html">MICROONDAS</a></li>
+            <li><i class="icon">&#128250;</i> <a href="pagina-tv-radio.html">TV/RADIOS</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Extreme Electronics. Todos los derechos reservados. <a href="#">Política de privacidad</a></p>
+    </footer>
+
+    <script>
+        // Script para mostrar u ocultar la barra lateral en pantallas pequeñas
+        const sidebarToggle = document.querySelector('.sidebar-toggle');
+        const sidebar = document.querySelector('.sidebar');
+        
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('show');
+        });
+
+        // Añadir el efecto de desvanecimiento
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1'; // Asegura que la opacidad se establece al 1 al cargar.
+        });
+    </script>
+    
+</body>
+</html>

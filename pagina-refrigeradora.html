@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Muebles Moderna</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 3em; /* Hacerlo más grande */
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ff6347, #ff4500, #ff8c00); /* Gradiente de colores cálidos */
+            -webkit-background-clip: text; /* Solo aplica el gradiente al texto */
+            color: transparent; /* El color se toma del gradiente */
+            text-shadow: 0 0 10px rgba(255, 99, 71, 0.8), 0 0 20px rgba(255, 69, 0, 0.6); /* Sombra para un efecto de brillo */
+        }
+
+        /* Products Section */
+        .products {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+            background: url('image copy 39.png') no-repeat center center/cover; /* Imagen de fondo */
+            color: white; /* Color blanco para texto sobre el fondo */
+        }
+
+        .products h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #FF6347; /* Título con color rojo anaranjado */
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s, margin-top 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            margin-top: -10px; /* Mueve el cuadro hacia arriba */
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* Asegura que la imagen se recorte si es necesario */
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .product-info p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 1em;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .buy-now {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745; /* Botón verde */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .buy-now:hover {
+            background-color: #218838; /* Verde más oscuro */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        footer .social-links a {
+            color: #fff;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer .social-links a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>LAS MEJORES REFRIGERADORAS</h1>
+    </header>
+
+    <!-- Products -->
+    <section class="products">
+        <h2>Refrigeradoras Destacadas</h2>
+        <div class="product-list">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <img src="image copy.png" alt="Refrigeradora Moderna">
+                <div class="product-info">
+                    <h3>Refrigeradora Moderna</h3>
+                    <p>Refrigeradora de alta capacidad y eficiencia energética.</p>
+                    <div class="price">$499.99</div>
+                    <div class="description">Esta refrigeradora es ideal para grandes familias que buscan eficiencia y espacio.</div>
+                    <a href="#" class="buy-now">Comparar</a>
+                </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <img src="image copy 2.png" alt="Refrigeradora Combinada">
+                <div class="product-info">
+                    <h3>Refrigeradora Combinada</h3>
+                    <p>Modelo con congelador superior y gran capacidad.</p>
+                    <div class="price">$379.99</div>
+                    <div class="description">Perfecta para quienes buscan un diseño clásico y espacio adicional para congelar.</div>
+                    <a href="#" class="buy-now">Comparar</a>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <img src="image copy 3.png" alt="Refrigeradora Smart">
+                <div class="product-info">
+                    <h3>Refrigeradora Smart</h3>
+                    <p>Controla tu refrigeradora desde tu smartphone.</p>
+                    <div class="price">$599.99</div>
+                    <div class="description">Con tecnología inteligente para un control remoto fácil y eficiente.</div>
+                    <a href="#" class="buy-now">Comparar</a>
+                </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <img src="image copy 4.png" alt="Refrigeradora Grande">
+                <div class="product-info">
+                    <h3>Refrigeradora Grande</h3>
+                    <p>Ideal para familias grandes.</p>
+                    <div class="price">$649.99</div>
+                    <div class="description">Con amplio espacio para mantener alimentos frescos por más tiempo.</div>
+                    <a href="#" class="buy-now">Comparar</a>
+                </div>
+            </div>
+            <!-- Product Card 5 -->
+            <div class="product-card">
+                <img src="image copy 5.png" alt="Refrigeradora Compacta">
+                <div class="product-info">
+                    <h3>Refrigeradora Compacta</h3>
+                    <p>Perfecta para espacios pequeños.</p>
+                    <div class="price">$249.99</div>
+                    <div class="description">Ideal para apartamentos pequeños o habitaciones con espacio limitado.</div>
+                    <a href="#" class="buy-now">Comparar</a>
+                </div>
+            </div>
+            <!-- Product Card 6 -->
+            <div class="product-card">
+                <img src="image copy 6.png" alt="Refrigeradora de Dos Puertas">
+                <div class="product-info">
+                    <h3>Refrigeradora de Dos Puertas</h3>
+                    <p>Diseño clásico con congelador separado.</p>
+                    <div class="price">$399.99</div>
+                    <div class="description">Una opción clásica que sigue siendo funcional y eficiente para todo hogar.</div>
+                    <a href="#" class="buy-now">Comparar</a>
+                </div>
+            </div>
+            <!-- Product Card 7 -->
+            <div class="product-card">
+                <img src="image copy 7.png" alt="Refrigeradora de Alta Gama">
+                <div class="product-info">
+                    <h3>Refrigeradora de Alta Gama</h3>
+                    <p>Refrigeradora con tecnología de punta.</p>
+                    <div class="price">$799.99</div>
+                    <div class="description">Tecnología avanzada para el hogar moderno, con eficiencia energética superior.</div>
+                    <a href="#" class="buy-now">Comparar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Tienda de Muebles Moderna</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+    <header id="INICIO">
+        <a href="index.html" class="no-style">Volver al Inicio</a>
+    </header>
+    
+    <style>
+        /* Estilo personalizado para enlaces */
+        .no-style {
+            color: inherit; /* Hereda el color del texto del contenedor */
+            text-decoration: none; /* Elimina el subrayado */
+            padding: 10px 20px;
+            border: 2px solid transparent; /* Sin bordes visibles */
+            border-radius: 5px; /* Bordes redondeados */
+            transition: background-color 0.3s, color 0.3s; /* Animación suave */
+        }
+    
+        .no-style:hover {
+            background-color: #00c1ff; /* Fondo al pasar el cursor */
+            color: #fff; /* Texto blanco al pasar el cursor */
+            text-decoration: none; /* Sin subrayado */
+        }
+    </style>
+
+</body>
+</html>
